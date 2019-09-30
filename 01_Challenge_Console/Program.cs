@@ -10,8 +10,8 @@ namespace _01_Challenge_Console
     {
         static void Main(string[] args)
         {
-
-            //CRUD
+            ProgramUI program = new ProgramUI();  //<--new uping a new program UI
+            program.Run();
         }
     }
 }
