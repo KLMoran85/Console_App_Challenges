@@ -23,7 +23,7 @@ namespace _02_Challenge_Console
                 Console.WriteLine("Hello! Please select a Menu Option\n" +
                     "1. See All Claims\n" +
                     "2. Take Care Of Next Claim\n" +
-                    "3. Enter A New Claim" +
+                    "3. Enter A New Claim\n" +
                     "4. Exit");
                 string input = Console.ReadLine();
 
@@ -83,9 +83,12 @@ namespace _02_Challenge_Console
 
             if (userAnswer == "y")
             {
-                _queueRepo.RemoveNextClaim();
+                _queueRepo.TakeCareOfNextClaim();
             }
-                
+             else
+            {
+                _queueRepo.RemoveNextClaim();
+            }   
         }
 
         private void EnterANewClaim()
@@ -96,9 +99,9 @@ namespace _02_Challenge_Console
 
             Console.WriteLine("Please select a Claim Type\n" +
 
-                    "1 = Car\n" + 
-                    "2 = Home\n" +
-                    "3 = Theft\n" +
+                    "1 Car\n" + 
+                    "2 Home\n" +
+                    "3 Theft\n" +
                     "4 Exit");
             string input = Console.ReadLine();
 
