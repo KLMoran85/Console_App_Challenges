@@ -14,7 +14,7 @@ namespace _01_Challenge_Tests
 
         [TestInitialize]
          public void Arrange()
-        {   //Arrange
+        {   
         _menuRepo = new MenuContentRepository();
         _content = _menuRepo.GetMenuContent();
 
@@ -24,14 +24,13 @@ namespace _01_Challenge_Tests
         MenuContent contentFour = new MenuContent(4, "Soup of the Day combo", "Daily soup with choice of side", "Broth with veeggies", 6.50m);
         MenuContent contentFive = new MenuContent(5, "Slice of Pizza combo", "Daily slice of pizza with choice of side", "Cheese with toppings and crust", 7.50m);
 
-            //Act
+           
             _menuRepo.AddContentToMenu(content);
             _menuRepo.AddContentToMenu(contentTwo);
             _menuRepo.AddContentToMenu(contentThree);
             _menuRepo.AddContentToMenu(contentFour);
             _menuRepo.AddContentToMenu(contentFive);
 
-           
         }
 
         [TestMethod]

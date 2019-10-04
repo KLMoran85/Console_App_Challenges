@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace _01_Challenge_Repository
 {
-    public class MenuContentRepository//<--this class will hold all of our CRUD  It will be the holder and manipulater for all data
+    public class MenuContentRepository
     {
-        List<MenuContent> _listOfContent; //<--creation of field is _listOfContent
+        List<MenuContent> _listOfContent; 
 
         public MenuContentRepository()
         {
             _listOfContent = new List<MenuContent>();
         }
 
-        //Create
-        public void AddContentToMenu(MenuContent content) //should be public so anyone outside the class can see it but it's not returning anything so it's void
+        
+        public void AddContentToMenu(MenuContent content) 
         {
             _listOfContent.Add(content);
         }
@@ -26,7 +26,6 @@ namespace _01_Challenge_Repository
             return _listOfContent;
         }
       
-       
         public MenuContent GetMenuContent(int mealNumber)
         {
             foreach (MenuContent content in _listOfContent)

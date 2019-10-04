@@ -10,7 +10,7 @@ namespace _01_Challenge_Console
     class ProgramUI
     {
 
-        private MenuContentRepository _menuRepo = new MenuContentRepository(); //Calling back to our Repository
+        private MenuContentRepository _menuRepo = new MenuContentRepository(); 
 
         public void Run()
         {
@@ -24,14 +24,12 @@ namespace _01_Challenge_Console
             while (keepRunning)
             {
 
-
-
                 Console.WriteLine("Select a Menu Option:\n" +
                 "1. Create New Content\n" +
                 "2. View All Content\n" +
                 "3. Remove MenuContent\n" +
                 "4. Exit");
-                String Input = Console.ReadLine();
+                string Input = Console.ReadLine();
 
                 switch (Input)
                 {
@@ -59,7 +57,7 @@ namespace _01_Challenge_Console
             }
             Console.Clear();
         }
-
+       
         private void CreateNewContent()
         {
             Console.Clear();

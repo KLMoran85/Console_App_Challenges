@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace _01_Challenge_Repository
 {
     public class MenuContent
-    {       //POCO
+    {       
         public int MealNumber { get; set; }
         public string MealName { get; set; }
         public string Description { get; set; }
@@ -16,7 +16,7 @@ namespace _01_Challenge_Repository
 
         public MenuContent()
         {
-            //empty constructor
+            
         }
 
         public MenuContent(int mealNumber, string mealName, string description, string listOfIngredients, decimal price)
